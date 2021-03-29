@@ -49,4 +49,4 @@ python3 renamer.py -d 'E:\Movies' -o -a -l 'ja'
 * **Théo GOBINET** - [Elec](https://github.com/theogobinet)
 ## License
 Renamer is licensed under the terms of the MIT Licence 
-and is available for free - see the [LICENSE.md](LICENSE.md) file for details.
+and is available for free - see the [LICENSE](https://github.com/theogobinet/Renamer/blob/main/LICENSE) file for details.
