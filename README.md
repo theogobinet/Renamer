@@ -16,32 +16,32 @@ The tool uses the IMDB search API to find the movie corresponding to the file. I
 
 In order to keep the original name of the movie, the tool can download a local IMDB database: [title.basics.tsv.gz](https://datasets.imdbws.com/). 
 
-A language recognition algorithm is then used to detect the origin of the film.
+OMDB API is then used to get the original langage of the movie. Get your API key at https://www.omdbapi.com/.
 
 ## Examples
 
 Simple usage, loop through the directory and search for every filename not respecting the format: ``moviename (year)``:
 ```
-python3 renamer.py -d 'E:\Movies'
+python3 renamer.py 'E:\Movies'
 ```
 
 Check even movies respecting the format:
 ```
-python3 renamer.py -d 'E:\Movies' -a
+python3 renamer.py 'E:\Movies' -a
 ```
-To keep the original language, french in this example, language codes uses ``ISO 639-1``:
+To keep the original language, french in this example:
 ```
-python3 renamer.py -d 'E:\Movies' -o -l 'fr'
+python3 renamer.py -d 'E:\Movies' -l 'french' -k 'api_key'
 ```
 Without this option a french movie named as ``Intouchables (2011).mkv`` will be found as ``The Intouchables (2011)``.
 
-The same works for japanese anime where without ``-o -l 'ja'``, movies will be renamed in english.
+The same works for japanese anime where without ``-l 'japanese'``, movies will be renamed in english.
 
 
 
 With this, you can also rename movies with their original names, with:
 ```
-python3 renamer.py -d 'E:\Movies' -o -a -l 'ja'
+python3 renamer.py -d 'E:\Movies' -a -l 'japanese' -k 'api_key'
 ```
  ``Castle in the Sky (1986).mkv`` is found as ``Tenkû no shiro Rapyuta (1986)``
 
